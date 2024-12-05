@@ -13,12 +13,15 @@ const app_service_1 = require("./app.service");
 const ninjas_controller_1 = require("./ninjas/ninjas.controller");
 const ninjas_module_1 = require("./ninjas/ninjas.module");
 const users_module_1 = require("./users/users.module");
+const database_module_1 = require("./database/database.module");
+const products_module_1 = require("./products/products.module");
+const orders_module_1 = require("./orders/orders.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [ninjas_module_1.NinjasModule, users_module_1.UsersModule],
+        imports: [ninjas_module_1.NinjasModule, users_module_1.UsersModule, database_module_1.DatabaseModule, products_module_1.ProductsModule, orders_module_1.OrdersModule],
         controllers: [app_controller_1.AppController, ninjas_controller_1.NinjasController],
         providers: [app_service_1.AppService],
     })

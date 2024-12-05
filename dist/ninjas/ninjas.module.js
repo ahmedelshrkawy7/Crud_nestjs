@@ -10,11 +10,14 @@ exports.NinjasModule = void 0;
 const common_1 = require("@nestjs/common");
 const ninjas_service_1 = require("./ninjas.service");
 const ninjas_controller_1 = require("./ninjas.controller");
+const typeorm_1 = require("@nestjs/typeorm");
+const ninja_entity_1 = require("./entities/ninja.entity");
 let NinjasModule = class NinjasModule {
 };
 exports.NinjasModule = NinjasModule;
 exports.NinjasModule = NinjasModule = __decorate([
     (0, common_1.Module)({
+        imports: [typeorm_1.TypeOrmModule.forFeature([ninja_entity_1.Ninja])],
         controllers: [ninjas_controller_1.NinjasController],
         providers: [ninjas_service_1.NinjasService],
         exports: [ninjas_service_1.NinjasService],
