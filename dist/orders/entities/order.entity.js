@@ -21,11 +21,11 @@ __decorate([
     __metadata("design:type", Number)
 ], Order.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, (user) => user.id),
+    (0, typeorm_1.ManyToOne)(() => user_entity_1.User, (user) => user.id, { eager: true }),
     __metadata("design:type", user_entity_1.User)
 ], Order.prototype, "user", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => product_entity_1.Product, (product) => product.id),
+    (0, typeorm_1.ManyToOne)(() => product_entity_1.Product, (product) => product.id, { eager: true }),
     __metadata("design:type", product_entity_1.Product)
 ], Order.prototype, "product", void 0);
 __decorate([
